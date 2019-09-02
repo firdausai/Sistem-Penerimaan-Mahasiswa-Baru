@@ -1,0 +1,29 @@
+CREATE TABLE ADMIN (
+	id_admin varchar(6),
+	username_admin varchar(10),
+	password_admin varchar(10),
+		CONSTRAINT ADMIN_PK PRIMARY KEY (id_admin) enable
+);
+CREATE TABLE KEUANGAN (
+	id_keuangan varchar(6),
+	username_keuangan varchar(10),
+	password_keuangan varchar(10),
+		CONSTRAINT KEUANGAN_PK PRIMARY KEY (id_keuangan) enable
+);
+CREATE TABLE CAMABA (
+	id_camaba varchar(8),
+	username_camaba varchar(10),
+	password_camaba varchar(10),
+	nama varchar(50),
+	nisn varchar(10),
+	agama varchar(10),
+	alamat varchar(30),
+	tempat_lahir varchar(20),
+	tanggal_lahir date,
+	status_kelulusan int,
+	status_pembayaran int,
+	bukti_kelulusan varchar(50),
+	pasfoto varchar(50),
+		CONSTRAINT CAMABA_PK PRIMARY KEY (id_camaba) enable
+);
+	
