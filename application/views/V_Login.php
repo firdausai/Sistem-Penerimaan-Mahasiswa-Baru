@@ -5,28 +5,63 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <link rel="stylesheet" href = "<?php echo base_url('assets/css/reset_stylesheet.css')?>">
         <link rel="stylesheet" href = "<?php echo base_url('assets/css/login_stylesheet.css')?>">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <div class = 'content'>
-            <div class = 'title'>
-                <h1>SIMPENMABA</h1>
-                <h2>Bobi University</h2>
+        <div class = 'main-container'>
+            <div class  = 'header'>
+                <div class = 'title'>
+                    <h1>SIMPENMABA</h1>
+                    <h2>Bobi University</h2>
+                </div>
             </div>
-            <div class = 'login'>
-                <form action="/action_page.php">
-                    <p>Username</p>
-                    <input type="text" name="username"><br>
-                    <p>Password</p>
-                    <input type="text" name="password"><br>
-                    <div class = 'login-button'>
-                        <input class = 'secondary-button-login' type="submit" value="Buat Akun">
-                        <input class = 'primary-button-login' type="submit" value="Masuk">
+            <div class = 'content'>
+                <!-- <div class = 'title'>
+                    <h1>SIMPENMABA</h1>
+                    <h2>Bobi University</h2>
+                </div> -->
+                <div class = 'login'>
+                    <div class = 'login-container'>
+                        <form action="/action_page.php">
+                            <p>Email</p>
+                            <input type="text" name="username"><br>
+                            <p>Password</p>
+                            <div class = 'password'>
+                                <input type="password" name="password"><br>
+                                <!-- <i id="toggle-password" class="fa fa-fw fa-eye field-icon toggle-password" aria-hidden="true" onClick="viewPassword()"></i>  -->
+                            </div>
+                            <div class = 'login-button'>
+                                <div class = 'secondary-button'>
+                                    <p class = 'secondary-button-login' ><a href = '<?php echo site_url('create')?>'>Buat Akun</a></p>
+                                </div>
+                                <input class = 'primary-button-login' type="submit" value="Masuk">
+                            </div>
+                        </form> 
                     </div>
-                </form> 
+                </div>
             </div>
         </div>
-            <div class = footer>
-                <p>Sistem Penerimaan Mahasiswa Baru (SIMPENMABA) 2019 Sistem Informasi, Bobi University</p>
-            </div>
+            <!-- <div class = 'footer'>
+                <div class = 'copyright'>
+                    <p>Sistem Penerimaan Mahasiswa Baru. 2019 Sistem Informasi, Bobi University</p>
+                </div>
+            </div> -->
     </body>
+
+    <script>
+        $( document ).ready(function() {
+            $(".toggle-password").click(function() {
+
+                $(this).toggleClass("fa-eye fa-eye-slash");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+        });
+    </script>
 </html>

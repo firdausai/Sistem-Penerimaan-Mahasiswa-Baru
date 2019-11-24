@@ -1,0 +1,106 @@
+@media only screen and (min-width: 992px) {
+
+    .keuangan-container {
+        font-family: 'poppins';
+        margin-bottom: 3%;
+    }
+
+    .header {
+        height: 10vh;
+        background-color: #29AB87;
+        box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+    }
+
+    .header-wrapper {
+        display: grid;
+        grid-template-areas: 'simpenmaba . . . . . . . . . . out';
+        margin: 0 10% 0 10%;
+    }
+
+    .header-wrapper > h1 {
+        grid-area: simpenmaba;
+        font-weight: 700;
+        font-size: 24px;
+        color: white;
+    }
+
+    .header-wrapper > p {
+        grid-area: out;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        font-size: 24px;
+        transition: all 0.5s;
+    }
+
+    .header-wrapper > p:hover {
+        /* color: rgb(206, 205, 205); */
+        transform: scale(0.9);
+    }
+
+    .header-wrapper > h1, .header-wrapper > p {
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .data-container {
+        margin: 3% 10% 0 10%;
+    }
+
+    .btn {
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+      
+      /* Darker background on mouse-over */
+    .accept:hover {
+        background-color: rgb(32, 133, 104);
+    }
+
+    .warning:hover {
+        background-color: #cec32e;
+    }
+
+    .neutral:hover {
+        background-color: #213e88;
+    }
+
+    table {
+        font-family: 'poppins';
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        font-weight: 700;
+    }
+      
+    td, th {
+        border-top: 1px solid #dddddd;
+        /* text-align: left; */
+        padding: 8px;
+    }
+
+    .center {
+        text-align: center;
+    }
+      
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    .neutral {
+        background-color:#294eab;
+    }
+
+    .warning {
+        background-color:#e0d430;
+    }
+
+    .accept {
+        background-color: #29AB87;
+    }
+}

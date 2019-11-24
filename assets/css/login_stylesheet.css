@@ -1,11 +1,58 @@
 @media only screen and (min-width: 992px) {
 
+    .main-container{
+        display: grid;
+        grid-template-areas:
+            'header'
+            'content';
+        height: 100vh
+    }
+
+    .password {
+        /* display: grid;
+        grid-template-areas: 'pass pass pass pass eye'; */
+    }
+
+    input[type=password] {
+        grid-area : pass;
+    }
+
+    .password > i {
+        grid-area: eye;
+        margin: auto;
+        transform: scale(1.2);
+        cursor: pointer;
+        z-index: 2;
+        /* border: 1px solid #555; */
+    }
+
+    .header {
+        display: grid;
+        grid-area: header;
+        grid-template-areas: 
+            'title .';
+        grid-template-columns: repeat(2, 1fr);
+        height: 10vh;
+    }
+
     .title {
         grid-area: title;
+        color: white;
+        font-family: 'poppins';
+        font-weight: 700;
     }
 
     .login {
         grid-area: login;
+        font-family: 'poppins';
+    }
+
+    .login-container {
+        background-color: #E6EDF0;
+    }
+
+    form > p {
+        font-weight: 500;
     }
 
     .footer {
@@ -15,12 +62,11 @@
     .content {
         display: grid;
         grid-template-areas:
-            'title login';
+            'login';
             /* 'footer footer'; */
-        grid-template-columns: repeat(2, 1fr);
-        /* align-content: center;
-        justify-content: center; */
-        height: 95vh;
+        grid-template-columns: repeat(1, 1fr);
+        grid-area: content;
+        height: 90vh;
     }
 
     .title {
@@ -28,22 +74,32 @@
     }
 
     .title > h1 {
-        font-size: 50px;
+        font-size: 25px;
     }
 
     .title > h2 {
-        font-size: 20px;
+        font-size: 10px;
     }
 
     .login {
-        margin: auto 25%;
+        margin: auto 25% auto 25%;
+    }
+    
+    .login-container {
+        box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
+        border-radius: 8px;
     }
 
-    input[type=text] {
+    .login-container > form{
+        padding: 10% 25%;
+    }
+
+    input[type=text], input[type=password] {
         padding: 12px 10px;
         margin: 8px 0;
-        border: 2px solid #29AB87;
-        border-radius: 10px;
+        border: 1px solid #555;
+        border-radius: 4px;
+        transition: border 0.5s;
     }
 
     input {
@@ -54,20 +110,49 @@
         background-color: #29AB87;
         border: none;
         color: white;
-        padding: 14px 0px;
+        padding: 10px 0px;
         text-decoration: none;
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 10px;
         grid-area: primary;
+        font-family: 'poppins';
+        font-size: 16px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+    }
+
+    .primary-button-login:hover {
+        background-color: rgb(36, 151, 119);
+    }
+
+    .primary-button-login:active {
+        transform: scale(0.9);
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     }
 
     .secondary-button-login {
-        border: none;
         display: inline-block;
-        background-color: #E6EDF0;
         cursor: pointer;
+        color:white;
+        transition: all 0.3s ease 0s;
+
+    }
+
+    .secondary-button-login:hover {
+        /* color:#29AB87; */
+        transform: scale(1.1);
+
+    }
+
+    .secondary-button-login:active {
+        transform: scale(0.9);
+
+    }
+
+    .secondary-button{
         grid-area: secondary;
+        margin: auto 0 auto auto;
     }
 
     .login-button {
@@ -76,17 +161,49 @@
         grid-template-columns: repeat(3, 1fr);
         align-content: center;
         justify-content: space-evenly;
+        grid-column-gap: 20px;
     }
 
     .footer {
         background-color: #29AB87;
         color: white;
         height: 5vh;
+        font-family: 'poppins';
+
     }
 
-    .footer > p {
+    .footer > div > p {
         display: inline-block;
-        padding-top: 5px;
+        padding-top: 6px;
         padding-left:10px;
+        font-size: 14px;
+    }
+
+    a:link {
+        color: black;
+        text-decoration: none;
+    }
+    a:visited {
+        color: black;
+        text-decoration: none;
+    }
+    a:hover {
+        transition: color 0.5s;
+        color: black;
+        text-decoration: none;
+    }
+    a:active {
+        color: black;
+        text-decoration: none;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        border: 1px solid #29AB87;
+    }
+
+    body {
+        background-image: url('login-background-2.jpg');
+        background-size: cover;
+        /* background-image: url('/assets/images/login-background.jpg'); */
     }
 }
