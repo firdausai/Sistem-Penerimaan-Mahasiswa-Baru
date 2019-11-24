@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <body>
         <div class = 'create-account-container'>
             <div class = 'questions'>
-                <form action="">
+                <form id = 'form-new-account' action = '"<?php echo base_url('C_Login/authentification'); ?>' method="post">
                     <div class = 'info-identity'>
                         <h1>Identitas</h1>
                         <div class = 'name'>
@@ -90,7 +90,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h1>Pilihan 1</h1>
                             <div>
                                 <p>Fakultas</p>
-                                <select name="cars">
+                                <select name="fakultas1">
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
@@ -99,7 +99,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div>
                                 <p>Jurusan</p>
-                                <select name="cars">
+                                <select name="jurusan1">
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
@@ -111,7 +111,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h1>Pilihan 2</h1>
                             <div>
                                 <p>Fakultas</p>
-                                <select name="cars">
+                                <select name="fakultas2">
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                             <div>
                                 <p>Jurusan</p>
-                                <select name="cars">
+                                <select name="jurusan2">
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
                                     <option value="fiat">Fiat</option>
@@ -142,6 +142,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var i = 1;
 
         $(document).ready(function() {
+
+            $('#submit').click(function() {
+                $('#form-new-account').submit();
+            })
 
             $('#islam').click(function() {
                 $("#radioIslam").prop("checked", true);
