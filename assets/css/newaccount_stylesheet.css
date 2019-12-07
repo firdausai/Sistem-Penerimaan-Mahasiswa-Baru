@@ -24,6 +24,11 @@
         margin-bottom: 20px;
     }
 
+    .ijazah-container > span, .skhun-container > span {
+        color: rgb(139, 143, 145);
+        font-size: 14px;
+    }
+
     .skhun-container {
         margin-left: 10px;
     }
@@ -138,6 +143,7 @@
 
         display:grid;
         grid-template-areas: 'auto auto';
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .choice-item {
@@ -258,6 +264,8 @@
           cursor: pointer;
       }
       
+
+
       .radio-toolbar > div:hover {
         background-color: rgb(55, 211, 167);
       }
@@ -274,6 +282,18 @@
     .selected {
         background-color: #29AB87;
         color:white;
+    }
+
+    .questions > .error {
+        /* border: 1px solid black; */
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(255, 153, 153);
+        color: black;
+    }
+
+    .hide {
+        display: none;
     }
 
 }

@@ -21,9 +21,20 @@
     .dot {
         height: 10px;
         width: 10px;
-        background-color: red;
         border-radius: 50%;
         display: inline-block;
+    }
+
+    .danger {
+        background-color: red;
+    }
+
+    .warning {
+        background-color: yellow;
+    }
+
+    .safe {
+        background-color: green;
     }
 
     .payment > p {
@@ -77,9 +88,24 @@
         box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
     }
 
+    .error {
+        /* grid-area: error; */
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(255, 153, 153);
+        color: black;
+
+    }
+
+    .title-payment > h1 > span {
+        color: rgb(139, 143, 145);
+        font-size: 14px;
+    }
+
     .information {
         display: grid;
-        grid-template-areas: 
+        grid-template-areas:
+            'error error'
             'payment status'
             'biodata biodata';
         grid-gap: 20px;
@@ -132,7 +158,7 @@
 
     .header-wrapper > p:hover {
         /* color: rgb(206, 205, 205); */
-        transform: scale(0.9);
+        transform: scale(1.1);
     }
 
     .header-wrapper > h1, .header-wrapper > p {
@@ -194,5 +220,32 @@
 
     .highlight {
         background-color: rgb(217, 224, 228);
+    }
+
+    .ijazah > img, .skhun > img, #image-modal{
+        width:300px;
+        height:400px;
+    }
+
+    .payment > p, .status > p {
+        text-align: center;
+    }
+
+    .header-wrapper > p > a:link {
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:hover {
+        transition: color 0.5s;
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:active {
+        color: white;
+        text-decoration: none;
     }
 }

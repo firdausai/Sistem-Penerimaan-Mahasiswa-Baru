@@ -51,7 +51,7 @@
         background-color: #E6EDF0;
     }
 
-    form > p {
+    form > div > p {
         font-weight: 500;
     }
 
@@ -88,6 +88,35 @@
     .login-container {
         box-shadow: 0 4px 12px 0px rgba(0,0,0,.25);
         border-radius: 8px;
+    }
+
+    form {
+        display: grid;
+        grid-template-areas:
+            'error'
+            'email'
+            'pass'
+            'login';
+    }
+
+    .email-container {
+        grid-area: email;
+    }
+
+    .pass-container {
+        grid-area: pass;
+    }
+
+    form p:first-of-type {
+        /* margin-top: 24px; */
+    }
+
+    .error {
+        grid-area: error;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: rgb(255, 153, 153);
+        color: black;
     }
 
     .login-container > form{
@@ -156,6 +185,7 @@
     }
 
     .login-button {
+        grid-area: login;
         display:grid;
         grid-template-areas: 'secondary secondary primary';
         grid-template-columns: repeat(3, 1fr);

@@ -24,13 +24,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div> -->
                 <div class = 'login'>
                     <div class = 'login-container'>
-                        <form action="/action_page.php">
-                            <p>Email</p>
-                            <input type="text" name="username"><br>
-                            <p>Password</p>
-                            <div class = 'password'>
-                                <input type="password" name="password"><br>
-                                <!-- <i id="toggle-password" class="fa fa-fw fa-eye field-icon toggle-password" aria-hidden="true" onClick="viewPassword()"></i>  -->
+                        <form method = "post" action = "<?php echo base_url('C_Login/login'); ?>">
+                            <?php if ($warning == '1'):?>
+                                <span class = 'error'>Email dan password tidak boleh kosong</span>
+                            <?php elseif ($warning == '2'):?>
+                                <span class = 'error'>Email tidak boleh kosong</span>
+                            <?php elseif ($warning == '3'):?>
+                                <span class = 'error'>Password tidak boleh kosong</span>
+                            <?php elseif ($warning == '4'):?>
+                                <span class = 'error'>Password tidak sesuai dengan email</span>
+                            <?php elseif ($warning == '5'):?>
+                                <span class = 'error'>Email tidak terdaftar</span>
+                            <?php endif; ?>
+                            <div class = 'email-container'>
+                                <p>Email</p>
+                                <input type="text" name="email"><br>
+                            </div>
+                            <div class = 'pass-container'>
+                                <p>Password</p>
+                                <div class = 'password'>
+                                    <input type="password" name="password"><br>
+                                    <!-- <i id="toggle-password" class="fa fa-fw fa-eye field-icon toggle-password" aria-hidden="true" onClick="viewPassword()"></i>  -->
+                                </div>
                             </div>
                             <div class = 'login-button'>
                                 <div class = 'secondary-button'>
@@ -38,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 <input class = 'primary-button-login' type="submit" value="Masuk">
                             </div>
-                        </form> 
+                        </form>
                     </div>
                 </div>
             </div>

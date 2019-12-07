@@ -35,7 +35,7 @@
 
     .header-wrapper > p:hover {
         /* color: rgb(206, 205, 205); */
-        transform: scale(0.9);
+        transform: scale(1.1);
     }
 
     .header-wrapper > h1, .header-wrapper > p {
@@ -102,5 +102,41 @@
 
     .accept {
         background-color: #29AB87;
+    }
+
+    .header-wrapper > p > a:link {
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    .pending {
+        background-color:#eee9a4 !important;
+    }
+
+    .transparent {
+        opacity: 50%;
+    }
+
+    .accepted {
+        background-color: rgb(143, 180, 168) !important;
+    }
+
+    #image-modal {
+        width:300px;
+        height:400px;
+    }
+
+    .header-wrapper > p > a:hover {
+        transition: color 0.5s;
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:active {
+        color: white;
+        text-decoration: none;
     }
 }

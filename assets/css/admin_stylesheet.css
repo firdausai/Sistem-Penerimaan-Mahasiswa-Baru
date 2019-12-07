@@ -35,7 +35,7 @@
 
     .header-wrapper > p:hover {
         /* color: rgb(206, 205, 205); */
-        transform: scale(0.9);
+        transform: scale(1.1);
     }
 
     .header-wrapper > h1, .header-wrapper > p {
@@ -45,6 +45,18 @@
 
     .data-container {
         margin: 3% 5% 0 5%;
+    }
+
+    .selected {
+        background-color: rgb(75, 150, 75) !important;
+    }
+
+    .text-white {
+        color: white;
+    }
+
+    .rejected {
+        background-color: rgb(250, 127, 127) !important;
     }
 
     .btn {
@@ -66,6 +78,15 @@
 
     .neutral:hover {
         background-color: #213e88;
+    }
+
+    #image-modal {
+        width:300px;
+        height:400px;
+    }
+
+    .reject:hover {
+        background-color: rgb(182, 3, 3);
     }
 
     table {
@@ -92,6 +113,10 @@
         background-color: #dddddd;
     }
 
+    .picked {
+        background-color: rgb(143, 180, 168) !important;
+    }
+
     .neutral {
         background-color:#294eab;
     }
@@ -110,5 +135,23 @@
 
     .reject-td {
         border-left: 1px solid black;
+    }
+
+    .header-wrapper > p > a:link {
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:visited {
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:hover {
+        transition: color 0.5s;
+        color: white;
+        text-decoration: none;
+    }
+    .header-wrapper > p > a:active {
+        color: white;
+        text-decoration: none;
     }
 }
